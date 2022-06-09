@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Event Listner</title>
+</head>
+<body>
+    <p id="test"> CLICK ME!</p>
+    <p id="myP" onclick="testAll()">Touch ME</p>
+
+    <input type="text" oninput="myInput()" placeholder="Text here" id="test1">
+    <select id="month">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+      <h1></h1>
+      <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li><li>30</li><li>31</li></ul>
+    <script>
+
+    
+    // Events 
+
+    // click
+
+    // var x = 67;
+
+    // var y = 68;
+   
+    // function myFun(){
+    //     let z = document.getElementById("demo");
+    //    z.innerHTML = "CHANGE ME";
+    //    z.style.color = "red";
+    //    z.style.font = 60;
+    // }
+
+    // function myOut(){
+    //     document.getElementById("demo").innerHTML = "Try ME";
+    // }
+
+    // copy
+
+    // function myFun(){
+    //     document.getElementById("demo").style.color = "red";
+    // }
+
+    // // input
+  
+//     function myInput(){
+// //         document.getElementById("test1").style.float = "right";
+// //     }
+
+// //     // Event listner
+
+// //     // document.getElementById("test").addEventListener("click", 
+// //     //      function(){
+// //     //          alert("You are bad!");
+// //     //      })
+
+// //     document.getElementById("test").addEventListener("click", myEvent);
+
+// //     function myEvent(){
+// //         alert("Hi");
+// //         document.getElementById("test").style.color = "blue";
+// //     }
+
+// //     // fullscreen
+
+// //     var output = document.getElementById("myP");
+// // document.addEventListener("fullscreenchange", function() {
+// //   output.innerHTML = "fullscreenchange event fired!";
+// // });
+
+// // query selector 
+
+// function test(){
+//     document.querySelector("p[id]").style.color = "orange";
+// }
+// function testAll(){
+//    document.querySelectorAll("p").style.color = "yellow";
+// }
+
+// const select = document.querySelector('select');
+// const list = document.querySelector('ul');
+// const h1 = document.querySelector('h1');
+
+// select.addEventListener('change', () => {
+//   const choice = select.value;
+
+//   let days = 31;
+//   if (choice === 'February') {
+//     days = 28;
+//   } else if (choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {
+//     days = 30;
+//   }
+
+//   createCalendar(days, choice);
+// });
+
+// function createCalendar(days, choice) {
+//   list.innerHTML = '';
+//   h1.textContent = choice;
+//   for (let i = 1; i <= days; i++) {
+//     const listItem = document.createElement('li');
+//     listItem.textContent = i;
+//     list.appendChild(listItem);
+//   }
+// }
+
+// createCalendar(31,'January');
+
+// condition 1
+
+// var season = prompt("Enter a season","");
+// var reason;
+
+// if(season == "summer"){
+//     reason = "This is the summer reason!";
+//     alert(reason);
+// }else if(season == "winter"){
+//     reason = "THis is the winter season!";
+//     alert(reason);
+// }else{
+//     reason = "We dono't know what season this";
+//     alert(reason);
+// }
+
+// condition 2
+
+// let machineActive = prompt("Machine is switch on","");
+
+// let response;
+
+// if(machineActive == "on"){
+//     let score = prompt("Enter your score", "");
+//    if(score <= 0 || score >= 100){
+//        reason = "This is not possible, an error has occurred.";
+//        alert(reason);
+// // //    }else if(score >= 0 && score <= 9){
+// // //     reason = "That was a terrible score — total fail!";
+// // //        alert(reason);
+
+// // //    }else if(score >= 20 && score <= 39){
+// // //     reason = "You know some things, but it\'s a pretty bad score. Needs improvement";
+// // //        alert(reason);
+
+// // //    }else if(score >= 40 && score <= 69){
+// // //     reason = "You did a passable job, not bad!";
+// // //        alert(reason);
+
+// // //    }else if(score >= 70 && score <= 89){
+// // //     reason = "That\'s a great score, you really know your stuff.";
+// // //        alert(reason);
+
+// // //    }else{
+// // //        reason = "What an amazing score! Did you cheat? Are you for real?";
+// // //        alert(reason);
+// // //    }
+// // // }else{
+// // //     reason = "Didn't on the machine kindly on it";
+// // //     alert(reason);
+// // // }
+
+// // // condition 3
+
+// // let machineActive = prompt("Machine is switch on","");
+
+// // let response;
+
+// // if(machineActive == "on"){
+// //     let score = prompt("Enter your score", "");
+// //    switch (score){
+// //        case (score <= 0 || score >= 100):
+// //        reason = "This is not possible, an error has occurred.";
+// //        alert(reason);
+// //        break;
+// //        case (score >= 0 && score <= 9):
+// //        reason = "That was a terrible score — total fail!";
+// //        alert(reason);
+// //        break;
+// //        case (score >= 20 && score <= 39):
+// //        reason = "You know some things, but it\'s a pretty bad score. Needs improvement";
+// //        alert(reason);
+// //        break;
+// //        case (score >= 40 && score <= 69):
+// //        reason = "You did a passable job, not bad!";
+// //        alert(reason);
+// //        break;
+// //        case (score >= 70 && score <= 89):
+// //        reason = "That\'s a great score, you really know your stuff.";
+// //        alert(reason);
+// //        break;
+// //        default:
+// //        reason = "What an amazing score! Did you cheat? Are you for real?";
+// //        alert(reason);
+
+// //    }
+// // }else{
+// //     reason = "Didn't on the machine kindly on it";
+// //     alert(reason);
+// // }
+
+
+// // // multi condition
+
+// // let age = prompt('age?', 18);
+
+// // let message = (age < 3) ? 'Hi, baby!' :
+// //   (age < 18) ? 'Hello!' :
+// //   (age < 100) ? 'Greetings!' :
+// //   'What an unusual age!';
+
+// // alert( message );
+
+// task
+if ("0") {
+  alert( 'Hello' );
+}
+    </script>
+    
+</body>
+</html>
